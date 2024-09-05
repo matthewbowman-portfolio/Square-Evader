@@ -9,7 +9,7 @@ export class Player {
         this.score_element.style.color = "rgb(177, 177, 177)";
         this.score_element.innerHTML = "Score :  " + this.score;
 
-        this.health = 3;
+        this.health = 9;
         this.speed = 3;
         this.hittable = true;
         this.width = 32;
@@ -38,10 +38,13 @@ export class Player {
 
     //update
     update(mouse, keyBoard, audio) {
-        //if player health <= 0 then game over
+        //if player health <= 0 then game over  -  if player health > 9, set it back to 9
         if (this.health <= 0) {
             this.gameState = "game-over";
             audio.element.pause();
+        }
+        if (this.health > 9) {
+            this.health = 9;
         }
 
         //update score
@@ -83,7 +86,7 @@ export class Player {
 
     //display player
     display(canvas) {
-        canvas.context.drawImage(this.element, this.pos_x, this.pos_y);
+        canvas.context.drawImage(this.element, this.pos_x, this.pos_y, this.width * window.devicePixelRatio, this.height * window.devicePixelRatio);
     }
 
     //return game state
