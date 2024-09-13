@@ -30,20 +30,23 @@ export class Waves {
             setTimeout(() => {
                 this.wave_activated = false;
                 this.current_wave++;
-                this.wave_element.innerHTML = "Wave :  " + this.current_wave;
             }, 3000);
         }
     }
 
     //update
     update(player, enemies) {
+
+        //
+        this.wave_element.innerHTML = "Wave :  " + this.current_wave;
+
         switch (this.current_wave) {
 
             //wave 1
             case 1 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -52,7 +55,7 @@ export class Waves {
             case 2 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -61,7 +64,7 @@ export class Waves {
             case 3 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -70,8 +73,8 @@ export class Waves {
             case 4 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 2, 2, 2000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 4, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -80,8 +83,8 @@ export class Waves {
             case 5 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 3, 2, 2000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 6, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -90,8 +93,8 @@ export class Waves {
             case 6 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 5, 2, 2000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 7, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -100,8 +103,8 @@ export class Waves {
             case 7 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 2, 2, 2000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 4, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -110,8 +113,8 @@ export class Waves {
             case 8 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 3, 2, 2000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 6, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -120,8 +123,8 @@ export class Waves {
             case 9 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 5, 2, 2000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 7, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -130,8 +133,8 @@ export class Waves {
             case 10 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 2, 2, 2000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 4, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -140,8 +143,8 @@ export class Waves {
             case 11 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 3, 2, 2000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 6, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -150,8 +153,8 @@ export class Waves {
             case 12 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 5, 2, 2000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 7, 2, 2000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -160,9 +163,9 @@ export class Waves {
             case 13 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -171,9 +174,9 @@ export class Waves {
             case 14 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -182,9 +185,9 @@ export class Waves {
             case 15 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 7, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 7, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -193,9 +196,9 @@ export class Waves {
             case 16 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -204,9 +207,9 @@ export class Waves {
             case 17 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -215,9 +218,9 @@ export class Waves {
             case 18 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 7, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 7, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -226,9 +229,9 @@ export class Waves {
             case 19 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -237,9 +240,9 @@ export class Waves {
             case 20 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -248,9 +251,9 @@ export class Waves {
             case 21 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 7, 2, 2000, player);
+                    enemies.spawnYellowSquares(1, 7, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -259,9 +262,9 @@ export class Waves {
             case 22 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -270,9 +273,9 @@ export class Waves {
             case 23 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -281,9 +284,9 @@ export class Waves {
             case 24 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -292,9 +295,9 @@ export class Waves {
             case 25 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -303,9 +306,9 @@ export class Waves {
             case 26 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -314,9 +317,9 @@ export class Waves {
             case 27 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(2, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(2, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(6, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -325,9 +328,9 @@ export class Waves {
             case 28 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(3, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 4, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -336,9 +339,9 @@ export class Waves {
             case 29 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(6, 6, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 3, 2, 2000, player);
-                    enemies.spawnYellowSquares(3, 3, 2, 3000, player);
+                    enemies.spawnRedSquares(12, 12, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -347,9 +350,9 @@ export class Waves {
             case 30 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
-                    enemies.spawnTealSquares(3, 5, 2, 2000, player);
-                    enemies.spawnYellowSquares(3, 5, 2, 3000, player);
+                    enemies.spawnRedSquares(15, 15, 2, 1000, player);
+                    enemies.spawnTealSquares(9, 6, 2, 2000, player);
+                    enemies.spawnYellowSquares(2, 6, 2, 3000, player);
                 }
                 this.endWave(enemies);
                 break;
@@ -358,9 +361,9 @@ export class Waves {
             case 31 :
                 if (this.wave_activated === false) {
                     this.startWave();
-                    enemies.spawnRedSquares(3, 3, 2, 1000, player);
-                    enemies.spawnTealSquares(1, 2, 2, 2000, player);
-                    enemies.spawnYellowSquares(1, 2, 2, 3000, player);
+                    enemies.spawnRedSquares(9, 9, 2, 1000, player);
+                    enemies.spawnTealSquares(3, 4, 2, 2000, player);
+                    enemies.spawnYellowSquares(3, 4, 2, 3000, player);
                     //spawn x1 reg boss
                 }
                 this.endWave(enemies);

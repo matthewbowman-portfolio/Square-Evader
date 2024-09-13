@@ -37,10 +37,11 @@ export class Player {
     }
 
     //update
-    update(mouse, keyBoard, audio) {
-        //if player health <= 0 then game over  -  if player health > 3, set it back to 9
+    update(mouse, keyBoard, audio, gameOverMenu) {
+        //if player health <= 0 then game over  -  if player health > 9, set it back to 9
         if (this.health <= 0) {
             this.gameState = "game-over";
+            gameOverMenu.gameState = "game-over";
             audio.element.pause();
         }
         if (this.health > 3) {
